@@ -13,7 +13,7 @@ function Templates() {
     
     const getdata=async()=>{
       try{
-      const res=await axios.get("http://localhost:8000/api/user/gettemplates");
+      const res=await axios.get("https://intromaker-backend.onrender.com/api/user/gettemplates");
       if(res.data.success===true){
         settemp(res.data.message);
       }

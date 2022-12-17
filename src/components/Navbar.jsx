@@ -12,7 +12,7 @@ function Navbar() {
   const dispatch=useDispatch()
 
   const logouthandler=async()=>{
-    const res=await axios.post("http://localhost:8000/api/user/logout");
+    const res=await axios.post("https://intromaker-backend.onrender.com/api/user/logout");
     if(res.data.success===true){
       dispatch(actions.logout());
       navigate('/login')

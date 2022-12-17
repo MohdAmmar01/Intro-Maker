@@ -63,7 +63,7 @@ const Register = () => {
         youtubechannel
 
       }
-      const res = await axios.post('http://localhost:8000/api/user/register', out)
+      const res = await axios.post('https://intromaker-backend.onrender.com/api/user/register', out)
       if (res.data.success) {
         setloading(false)
         dispatch(actions.login(res.data.user));

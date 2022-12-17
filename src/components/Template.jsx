@@ -17,7 +17,7 @@ function Data() {
   const [url,seturl]=useState()
   const generatehandler=async()=>{
     setloading(true);
-    const res=await axios.post(`http://localhost:8000/api/user/generate`,{
+    const res=await axios.post(`https://intromaker-backend.onrender.com/api/user/generate`,{
       name:auth.userdata.youtubechannel.toUpperCase(),
       templeteid:id
     })
@@ -29,7 +29,7 @@ function Data() {
   }
   const getdata=async()=>{
     try{
-      const res=await axios.get(`http://localhost:8000/api/user/template/${id}`)
+      const res=await axios.get(`https://intromaker-backend.onrender.com/api/user/template/${id}`)
       if(res.data.success===true){
         setdata(res.data.message);
       }
