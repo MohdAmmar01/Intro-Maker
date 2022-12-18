@@ -13,7 +13,6 @@ axios.defaults.withCredentials = true;
 
 function App() {
   const auth = useSelector((state) => state);
-  console.log(auth)
   return (
     <>
      <BrowserRouter>

@@ -5,7 +5,6 @@ import ld from '../images/loader.gif'
 import load from '../images/load.gif'
 import Navbar from './Navbar'
 import { useSelector } from 'react-redux';
-import  fileDownload  from 'js-file-download'
 
 function Data() {
   const {id}=useParams()
@@ -49,9 +48,7 @@ function Data() {
    { loading?<div className='dow'>Generating Video plz wait<img className='loading' src={load} alt='loader' /></div>:null}
      <div className='dow'>
    
-     {generated  ?  <button className='gen' onClick={()=>{
-      fileDownload(url, `${Math.random()}.mp4`);
-     }}> Download 😃</button>:  loading ? null :<button className='gen' onClick={generatehandler}>Generate Video</button>}
+     {generated  ?  <button className='gen'><a href={url} download>Download 😃</a> </button>:  loading ? null :<button className='gen' onClick={generatehandler}>Generate Video</button>}
      </div>
 
 
